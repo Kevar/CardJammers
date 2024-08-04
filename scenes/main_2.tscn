@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://bupvwi40cxlfl"]
+[gd_scene load_steps=7 format=3 uid="uid://bupvwi40cxlfl"]
 
+[ext_resource type="Script" path="res://scripts/main_2.gd" id="1_1f3i2"]
 [ext_resource type="PackedScene" uid="uid://pwpwsjfs5fkr" path="res://scenes/board_2.tscn" id="1_udjra"]
 [ext_resource type="PackedScene" uid="uid://b4nk4r13hdiqc" path="res://scenes/cell_2.tscn" id="2_1cud1"]
+[ext_resource type="Resource" uid="uid://ctkgvf3lnhn8i" path="res://patterns/p1.tres" id="2_tcvyp"]
+[ext_resource type="Resource" uid="uid://c06ew1vtvoyk7" path="res://patterns/p2.tres" id="6_dlcs8"]
+[ext_resource type="Resource" uid="uid://dguapxn3c3kif" path="res://patterns/p3.tres" id="7_j176e"]
 
 [node name="main2" type="Node2D"]
+script = ExtResource("1_1f3i2")
+objectives = Array[Resource("res://scripts/pattern.gd")]([ExtResource("7_j176e"), ExtResource("2_tcvyp"), ExtResource("6_dlcs8")])
 
 [node name="board2" parent="." instance=ExtResource("1_udjra")]
 cellScene = ExtResource("2_1cud1")
@@ -11,3 +17,31 @@ width = 19
 height = 19
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
+
+[node name="GridContainer" type="GridContainer" parent="Camera2D/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="GlobalActionButton" type="Button" parent="Camera2D/CanvasLayer"]
+custom_minimum_size = Vector2(120, 30)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -88.0
+offset_top = 5.0
+offset_right = 88.0
+offset_bottom = 36.0
+grow_horizontal = 2
+text = "Player 1 : Play a stone"
+
+[connection signal="pressed" from="Camera2D/CanvasLayer/GlobalActionButton" to="." method="_on_global_action_button_pressed"]

@@ -15,8 +15,8 @@ func init_cell(x:int, y:int):
 	boardY = y
 
 func _process(_delta):
-	currentState = GameManager.get_board_cell(boardX, boardY)
-	sprite.modulate =  Color.GRAY if mouseOver and currentState == GameManager.CellState.FREE else GameManager.cellColors[currentState]
+	currentState = GameManager.API_get_board_cell(boardX, boardY)
+	sprite.modulate = GameManager.cellColors[GameManager.currentPlayer + 3] if mouseOver and currentState == GameManager.CellState.FREE and GameManager.currentPlayerCanPlayAStone else GameManager.cellColors[currentState]
 
 func _input(event):
 	if currentState == GameManager.CellState.FREE and mouseOver and event is InputEventMouseButton:
