@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Pattern" load_steps=2 format=3 uid="uid://b25mia7rtqlpw"]
+
+[ext_resource type="Script" path="res://scripts/pattern.gd" id="1_7637c"]
+
+[resource]
+script = ExtResource("1_7637c")
+bits = 143425
