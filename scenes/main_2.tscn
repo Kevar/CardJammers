@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bupvwi40cxlfl"]
+
+[ext_resource type="PackedScene" uid="uid://pwpwsjfs5fkr" path="res://scenes/board_2.tscn" id="1_udjra"]
+[ext_resource type="PackedScene" uid="uid://b4nk4r13hdiqc" path="res://scenes/cell_2.tscn" id="2_1cud1"]
+
+[node name="main2" type="Node2D"]
+
+[node name="board2" parent="." instance=ExtResource("1_udjra")]
+cellScene = ExtResource("2_1cud1")
+width = 19
+height = 19
+
+[node name="Camera2D" type="Camera2D" parent="."]

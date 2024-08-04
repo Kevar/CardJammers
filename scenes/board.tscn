@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://gjkwwx7bk7ow"]
+
+[ext_resource type="Script" path="res://scripts/board.gd" id="1_hg2cn"]
+[ext_resource type="PackedScene" uid="uid://cjx4skt66tokm" path="res://scenes/cell.tscn" id="2_vhsvs"]
+
+[node name="board" type="Node2D"]
+script = ExtResource("1_hg2cn")
+cell_scene = ExtResource("2_vhsvs")
+width = 2
+height = 2

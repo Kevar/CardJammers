@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4nk4r13hdiqc"]
+
+[ext_resource type="Texture2D" uid="uid://56gau8g33a5p" path="res://assets/basic_tile.png" id="1_1i8qs"]
+[ext_resource type="Script" path="res://scripts/cell_2.gd" id="1_dd7n3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tmuj1"]
+size = Vector2(64, 64)
+
+[node name="cell2" type="Area2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_dd7n3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1i8qs")
+region_enabled = true
+region_rect = Rect2(64, 0, 64, 64)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tmuj1")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

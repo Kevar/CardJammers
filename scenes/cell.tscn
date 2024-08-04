@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjx4skt66tokm"]
+
+[ext_resource type="Script" path="res://scripts/cell.gd" id="1_8xghq"]
+[ext_resource type="Texture2D" uid="uid://56gau8g33a5p" path="res://assets/basic_tile.png" id="1_a1ii8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_moj0i"]
+size = Vector2(64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1o8p"]
+atlas = ExtResource("1_a1ii8")
+region = Rect2(0, 0, 64, 64)
+
+[node name="cell" type="Area2D"]
+script = ExtResource("1_8xghq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_moj0i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_e1o8p")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

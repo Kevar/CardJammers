@@ -1,0 +1,892 @@
+[gd_scene load_steps=5 format=3 uid="uid://deouybru0o2pa"]
+
+[ext_resource type="PackedScene" uid="uid://gjkwwx7bk7ow" path="res://scenes/board.tscn" id="1_ygsml"]
+[ext_resource type="Script" path="res://scripts/cell.gd" id="2_5md53"]
+[ext_resource type="PackedScene" uid="uid://cjx4skt66tokm" path="res://scenes/cell.tscn" id="2_yvjtt"]
+[ext_resource type="PackedScene" uid="uid://c10lp3ypprkip" path="res://scenes/deck.tscn" id="3_r20k8"]
+
+[node name="main" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="board" parent="." instance=ExtResource("1_ygsml")]
+width = 12
+height = 12
+
+[node name="@Area2D@102653" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-352, -352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102654" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-352, -288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102655" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-352, -224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102656" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-352, -160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102657" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-352, -96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102658" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-352, -32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102659" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-352, 32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102660" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-352, 96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102661" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-352, 160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102662" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-352, 224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102663" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-352, 288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102664" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-352, 352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102665" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-288, -352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102666" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-288, -288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102667" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-288, -224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102668" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-288, -160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102669" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-288, -96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102670" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-288, -32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102671" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-288, 32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102672" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-288, 96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102673" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-288, 160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102674" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-288, 224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102675" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-288, 288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102676" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-288, 352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102677" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-224, -352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102678" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-224, -288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102679" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-224, -224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102680" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-224, -160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102681" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-224, -96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102682" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-224, -32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102683" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-224, 32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102684" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-224, 96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102685" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-224, 160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102686" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-224, 224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102687" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-224, 288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102688" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-224, 352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102689" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-160, -352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102690" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-160, -288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102691" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-160, -224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102692" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-160, -160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102693" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-160, -96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102694" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-160, -32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102695" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-160, 32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102696" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-160, 96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102697" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-160, 160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102698" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-160, 224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102699" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-160, 288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102700" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-160, 352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102701" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-96, -352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102702" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-96, -288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102703" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-96, -224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102704" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-96, -160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102705" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-96, -96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102706" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-96, -32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102707" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-96, 32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102708" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-96, 96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102709" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-96, 160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102710" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-96, 224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102711" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-96, 288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102712" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-96, 352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102713" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-32, -352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102714" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-32, -288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102715" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-32, -224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102716" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-32, -160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102717" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-32, -96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102718" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-32, -32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102719" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-32, 32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102720" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-32, 96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102721" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-32, 160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102722" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-32, 224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102723" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-32, 288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102724" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(-32, 352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102725" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(32, -352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102726" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(32, -288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102727" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(32, -224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102728" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(32, -160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102729" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(32, -96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102730" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(32, -32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102731" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(32, 32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102732" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(32, 96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102733" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(32, 160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102734" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(32, 224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102735" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(32, 288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102736" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(32, 352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102737" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(96, -352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102738" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(96, -288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102739" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(96, -224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102740" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(96, -160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102741" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(96, -96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102742" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(96, -32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102743" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(96, 32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102744" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(96, 96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102745" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(96, 160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102746" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(96, 224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102747" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(96, 288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102748" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(96, 352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102749" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(160, -352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102750" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(160, -288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102751" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(160, -224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102752" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(160, -160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102753" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(160, -96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102754" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(160, -32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102755" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(160, 32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102756" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(160, 96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102757" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(160, 160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102758" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(160, 224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102759" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(160, 288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102760" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(160, 352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102761" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(224, -352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102762" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(224, -288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102763" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(224, -224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102764" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(224, -160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102765" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(224, -96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102766" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(224, -32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102767" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(224, 32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102768" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(224, 96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102769" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(224, 160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102770" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(224, 224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102771" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(224, 288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102772" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(224, 352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102773" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(288, -352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102774" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(288, -288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102775" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(288, -224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102776" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(288, -160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102777" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(288, -96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102778" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(288, -32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102779" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(288, 32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102780" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(288, 96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102781" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(288, 160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102782" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(288, 224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102783" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(288, 288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102784" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(288, 352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102785" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(352, -352)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102786" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(352, -288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102787" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(352, -224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102788" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(352, -160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102789" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(352, -96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102790" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(352, -32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102791" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(352, 32)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102792" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(352, 96)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102793" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(352, 160)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102794" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(352, 224)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102795" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(352, 288)
+script = ExtResource("2_5md53")
+
+[node name="@Area2D@102796" type="Area2D" parent="board" instance=ExtResource("2_yvjtt")]
+position = Vector2(352, 352)
+script = ExtResource("2_5md53")
+
+[node name="deck_right" parent="." instance=ExtResource("3_r20k8")]
+position = Vector2(450, -275)
+cardCount = 16
+firstPlayer = true
+color = Color(1, 0.3241, 0.258944, 1)
+
+[node name="deck_left" parent="." instance=ExtResource("3_r20k8")]
+position = Vector2(-479, -275)
+cardCount = 16
+color = Color(0.299968, 0.511606, 1, 1)
+
+[connection signal="mouse_entered" from="board/@Area2D@102653" to="board/@Area2D@102653" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102653" to="board/@Area2D@102653" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102654" to="board/@Area2D@102654" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102654" to="board/@Area2D@102654" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102655" to="board/@Area2D@102655" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102655" to="board/@Area2D@102655" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102656" to="board/@Area2D@102656" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102656" to="board/@Area2D@102656" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102657" to="board/@Area2D@102657" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102657" to="board/@Area2D@102657" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102658" to="board/@Area2D@102658" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102658" to="board/@Area2D@102658" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102659" to="board/@Area2D@102659" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102659" to="board/@Area2D@102659" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102660" to="board/@Area2D@102660" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102660" to="board/@Area2D@102660" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102661" to="board/@Area2D@102661" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102661" to="board/@Area2D@102661" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102662" to="board/@Area2D@102662" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102662" to="board/@Area2D@102662" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102663" to="board/@Area2D@102663" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102663" to="board/@Area2D@102663" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102664" to="board/@Area2D@102664" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102664" to="board/@Area2D@102664" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102665" to="board/@Area2D@102665" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102665" to="board/@Area2D@102665" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102666" to="board/@Area2D@102666" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102666" to="board/@Area2D@102666" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102667" to="board/@Area2D@102667" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102667" to="board/@Area2D@102667" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102668" to="board/@Area2D@102668" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102668" to="board/@Area2D@102668" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102669" to="board/@Area2D@102669" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102669" to="board/@Area2D@102669" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102670" to="board/@Area2D@102670" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102670" to="board/@Area2D@102670" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102671" to="board/@Area2D@102671" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102671" to="board/@Area2D@102671" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102672" to="board/@Area2D@102672" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102672" to="board/@Area2D@102672" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102673" to="board/@Area2D@102673" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102673" to="board/@Area2D@102673" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102674" to="board/@Area2D@102674" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102674" to="board/@Area2D@102674" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102675" to="board/@Area2D@102675" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102675" to="board/@Area2D@102675" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102676" to="board/@Area2D@102676" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102676" to="board/@Area2D@102676" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102677" to="board/@Area2D@102677" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102677" to="board/@Area2D@102677" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102678" to="board/@Area2D@102678" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102678" to="board/@Area2D@102678" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102679" to="board/@Area2D@102679" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102679" to="board/@Area2D@102679" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102680" to="board/@Area2D@102680" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102680" to="board/@Area2D@102680" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102681" to="board/@Area2D@102681" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102681" to="board/@Area2D@102681" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102682" to="board/@Area2D@102682" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102682" to="board/@Area2D@102682" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102683" to="board/@Area2D@102683" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102683" to="board/@Area2D@102683" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102684" to="board/@Area2D@102684" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102684" to="board/@Area2D@102684" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102685" to="board/@Area2D@102685" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102685" to="board/@Area2D@102685" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102686" to="board/@Area2D@102686" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102686" to="board/@Area2D@102686" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102687" to="board/@Area2D@102687" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102687" to="board/@Area2D@102687" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102688" to="board/@Area2D@102688" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102688" to="board/@Area2D@102688" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102689" to="board/@Area2D@102689" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102689" to="board/@Area2D@102689" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102690" to="board/@Area2D@102690" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102690" to="board/@Area2D@102690" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102691" to="board/@Area2D@102691" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102691" to="board/@Area2D@102691" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102692" to="board/@Area2D@102692" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102692" to="board/@Area2D@102692" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102693" to="board/@Area2D@102693" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102693" to="board/@Area2D@102693" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102694" to="board/@Area2D@102694" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102694" to="board/@Area2D@102694" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102695" to="board/@Area2D@102695" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102695" to="board/@Area2D@102695" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102696" to="board/@Area2D@102696" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102696" to="board/@Area2D@102696" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102697" to="board/@Area2D@102697" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102697" to="board/@Area2D@102697" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102698" to="board/@Area2D@102698" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102698" to="board/@Area2D@102698" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102699" to="board/@Area2D@102699" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102699" to="board/@Area2D@102699" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102700" to="board/@Area2D@102700" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102700" to="board/@Area2D@102700" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102701" to="board/@Area2D@102701" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102701" to="board/@Area2D@102701" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102702" to="board/@Area2D@102702" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102702" to="board/@Area2D@102702" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102703" to="board/@Area2D@102703" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102703" to="board/@Area2D@102703" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102704" to="board/@Area2D@102704" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102704" to="board/@Area2D@102704" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102705" to="board/@Area2D@102705" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102705" to="board/@Area2D@102705" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102706" to="board/@Area2D@102706" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102706" to="board/@Area2D@102706" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102707" to="board/@Area2D@102707" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102707" to="board/@Area2D@102707" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102708" to="board/@Area2D@102708" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102708" to="board/@Area2D@102708" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102709" to="board/@Area2D@102709" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102709" to="board/@Area2D@102709" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102710" to="board/@Area2D@102710" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102710" to="board/@Area2D@102710" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102711" to="board/@Area2D@102711" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102711" to="board/@Area2D@102711" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102712" to="board/@Area2D@102712" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102712" to="board/@Area2D@102712" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102713" to="board/@Area2D@102713" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102713" to="board/@Area2D@102713" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102714" to="board/@Area2D@102714" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102714" to="board/@Area2D@102714" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102715" to="board/@Area2D@102715" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102715" to="board/@Area2D@102715" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102716" to="board/@Area2D@102716" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102716" to="board/@Area2D@102716" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102717" to="board/@Area2D@102717" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102717" to="board/@Area2D@102717" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102718" to="board/@Area2D@102718" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102718" to="board/@Area2D@102718" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102719" to="board/@Area2D@102719" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102719" to="board/@Area2D@102719" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102720" to="board/@Area2D@102720" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102720" to="board/@Area2D@102720" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102721" to="board/@Area2D@102721" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102721" to="board/@Area2D@102721" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102722" to="board/@Area2D@102722" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102722" to="board/@Area2D@102722" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102723" to="board/@Area2D@102723" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102723" to="board/@Area2D@102723" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102724" to="board/@Area2D@102724" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102724" to="board/@Area2D@102724" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102725" to="board/@Area2D@102725" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102725" to="board/@Area2D@102725" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102726" to="board/@Area2D@102726" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102726" to="board/@Area2D@102726" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102727" to="board/@Area2D@102727" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102727" to="board/@Area2D@102727" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102728" to="board/@Area2D@102728" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102728" to="board/@Area2D@102728" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102729" to="board/@Area2D@102729" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102729" to="board/@Area2D@102729" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102730" to="board/@Area2D@102730" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102730" to="board/@Area2D@102730" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102731" to="board/@Area2D@102731" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102731" to="board/@Area2D@102731" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102732" to="board/@Area2D@102732" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102732" to="board/@Area2D@102732" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102733" to="board/@Area2D@102733" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102733" to="board/@Area2D@102733" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102734" to="board/@Area2D@102734" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102734" to="board/@Area2D@102734" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102735" to="board/@Area2D@102735" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102735" to="board/@Area2D@102735" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102736" to="board/@Area2D@102736" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102736" to="board/@Area2D@102736" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102737" to="board/@Area2D@102737" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102737" to="board/@Area2D@102737" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102738" to="board/@Area2D@102738" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102738" to="board/@Area2D@102738" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102739" to="board/@Area2D@102739" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102739" to="board/@Area2D@102739" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102740" to="board/@Area2D@102740" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102740" to="board/@Area2D@102740" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102741" to="board/@Area2D@102741" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102741" to="board/@Area2D@102741" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102742" to="board/@Area2D@102742" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102742" to="board/@Area2D@102742" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102743" to="board/@Area2D@102743" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102743" to="board/@Area2D@102743" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102744" to="board/@Area2D@102744" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102744" to="board/@Area2D@102744" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102745" to="board/@Area2D@102745" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102745" to="board/@Area2D@102745" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102746" to="board/@Area2D@102746" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102746" to="board/@Area2D@102746" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102747" to="board/@Area2D@102747" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102747" to="board/@Area2D@102747" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102748" to="board/@Area2D@102748" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102748" to="board/@Area2D@102748" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102749" to="board/@Area2D@102749" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102749" to="board/@Area2D@102749" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102750" to="board/@Area2D@102750" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102750" to="board/@Area2D@102750" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102751" to="board/@Area2D@102751" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102751" to="board/@Area2D@102751" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102752" to="board/@Area2D@102752" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102752" to="board/@Area2D@102752" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102753" to="board/@Area2D@102753" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102753" to="board/@Area2D@102753" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102754" to="board/@Area2D@102754" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102754" to="board/@Area2D@102754" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102755" to="board/@Area2D@102755" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102755" to="board/@Area2D@102755" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102756" to="board/@Area2D@102756" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102756" to="board/@Area2D@102756" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102757" to="board/@Area2D@102757" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102757" to="board/@Area2D@102757" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102758" to="board/@Area2D@102758" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102758" to="board/@Area2D@102758" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102759" to="board/@Area2D@102759" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102759" to="board/@Area2D@102759" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102760" to="board/@Area2D@102760" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102760" to="board/@Area2D@102760" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102761" to="board/@Area2D@102761" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102761" to="board/@Area2D@102761" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102762" to="board/@Area2D@102762" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102762" to="board/@Area2D@102762" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102763" to="board/@Area2D@102763" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102763" to="board/@Area2D@102763" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102764" to="board/@Area2D@102764" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102764" to="board/@Area2D@102764" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102765" to="board/@Area2D@102765" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102765" to="board/@Area2D@102765" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102766" to="board/@Area2D@102766" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102766" to="board/@Area2D@102766" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102767" to="board/@Area2D@102767" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102767" to="board/@Area2D@102767" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102768" to="board/@Area2D@102768" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102768" to="board/@Area2D@102768" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102769" to="board/@Area2D@102769" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102769" to="board/@Area2D@102769" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102770" to="board/@Area2D@102770" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102770" to="board/@Area2D@102770" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102771" to="board/@Area2D@102771" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102771" to="board/@Area2D@102771" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102772" to="board/@Area2D@102772" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102772" to="board/@Area2D@102772" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102773" to="board/@Area2D@102773" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102773" to="board/@Area2D@102773" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102774" to="board/@Area2D@102774" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102774" to="board/@Area2D@102774" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102775" to="board/@Area2D@102775" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102775" to="board/@Area2D@102775" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102776" to="board/@Area2D@102776" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102776" to="board/@Area2D@102776" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102777" to="board/@Area2D@102777" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102777" to="board/@Area2D@102777" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102778" to="board/@Area2D@102778" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102778" to="board/@Area2D@102778" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102779" to="board/@Area2D@102779" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102779" to="board/@Area2D@102779" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102780" to="board/@Area2D@102780" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102780" to="board/@Area2D@102780" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102781" to="board/@Area2D@102781" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102781" to="board/@Area2D@102781" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102782" to="board/@Area2D@102782" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102782" to="board/@Area2D@102782" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102783" to="board/@Area2D@102783" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102783" to="board/@Area2D@102783" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102784" to="board/@Area2D@102784" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102784" to="board/@Area2D@102784" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102785" to="board/@Area2D@102785" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102785" to="board/@Area2D@102785" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102786" to="board/@Area2D@102786" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102786" to="board/@Area2D@102786" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102787" to="board/@Area2D@102787" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102787" to="board/@Area2D@102787" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102788" to="board/@Area2D@102788" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102788" to="board/@Area2D@102788" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102789" to="board/@Area2D@102789" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102789" to="board/@Area2D@102789" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102790" to="board/@Area2D@102790" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102790" to="board/@Area2D@102790" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102791" to="board/@Area2D@102791" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102791" to="board/@Area2D@102791" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102792" to="board/@Area2D@102792" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102792" to="board/@Area2D@102792" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102793" to="board/@Area2D@102793" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102793" to="board/@Area2D@102793" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102794" to="board/@Area2D@102794" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102794" to="board/@Area2D@102794" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102795" to="board/@Area2D@102795" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102795" to="board/@Area2D@102795" method="_on_mouse_exited"]
+[connection signal="mouse_entered" from="board/@Area2D@102796" to="board/@Area2D@102796" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="board/@Area2D@102796" to="board/@Area2D@102796" method="_on_mouse_exited"]
+
+[editable path="board"]
