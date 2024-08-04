@@ -24,6 +24,7 @@ func _ready():
 		var powView:PowerView = powV.instantiate()
 		powView.power = pow
 		powerGrid.add_child(powView)
+		powView.launchPower.connect(_on_launch_power)
 
 func _process(_delta):
 	if GameManager.currentPlayerCanPlayAStone:
@@ -54,3 +55,15 @@ func _on_pattern_view_check_pattern(p:PatternView):
 		#	GameManager.currentPlayerCanCheckAPattern = false
 		else:
 			print("Pattern not found")
+
+func _on_launch_power(p: Power):
+	var eff = Powers.dispatch(p.effect, GameManager.currentPlayer + 1)
+	if eff:
+		print("Launch power: " + str(p.effect))
+		eff.do()
+		eff.done.connect(func(): _on_power_done(eff))
+	else:
+		print("Could not launch power: " + str(p.effect))
+
+func _on_power_done(p: PowerEffect):
+	p.queue_free()
