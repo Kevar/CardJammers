@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Power" load_steps=2 format=3 uid="uid://bj8ldbn0daxhd"]
+
+[ext_resource type="Script" path="res://scripts/power.gd" id="1_do2ui"]
+
+[resource]
+script = ExtResource("1_do2ui")
+description = "Petrify"
+effect = 0

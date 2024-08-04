@@ -85,6 +85,8 @@ var player2ObjectivesCount:int = 0
 
 signal updatePatternViewButtons
 signal gameOver(winner:int)
+signal boardCellClicked(x: int, y: int)
+
 
 func init_board(width:int, height:int, p1Color:Color, p2Color:Color):
 	boardWidth = width
@@ -127,6 +129,9 @@ func API_get_board_cell(x:int, y:int) -> CellState:
 func API_set_board_cell(x:int, y:int, state:CellState):
 	board[x + y * boardWidth] = state
 
+func API_board_cell_clicked() -> Signal:
+	return boardCellClicked
+
 func click_board_cell(x:int, y:int):
 	var state = API_get_board_cell(x, y)
 	
@@ -142,6 +147,8 @@ func click_board_cell(x:int, y:int):
 			currentPlayerCanPlayAStone = false
 			currentPlayerCanCheckAPattern = true
 			updatePatternViewButtons.emit()
+
+	boardCellClicked.emit(x, y)
 
 func next_player():
 	currentPlayer = 1-currentPlayer
@@ -185,6 +192,14 @@ func API_find_and_stone_pattern(pattern:Pattern, state:CellState) -> bool:
 			return true
 			
 	return false
+
+func API_board_count_cells(state: CellState) -> int:
+	var res = 0
+	for x in range(0, boardWidth):
+		for y in range(0, boardHeight):
+			if state == API_get_board_cell(x, y):
+				res += 1
+	return res
 
 func find_sub_pattern(pattern_bits:int, state:CellState) -> Vector2i:
 	for x in range(-4, boardWidth):

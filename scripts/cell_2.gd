@@ -19,9 +19,10 @@ func _process(_delta):
 	sprite.modulate = GameManager.cellColors[GameManager.currentPlayer + 3] if mouseOver and currentState == GameManager.CellState.FREE and GameManager.currentPlayerCanPlayAStone else GameManager.cellColors[currentState]
 
 func _input(event):
-	if currentState == GameManager.CellState.FREE and mouseOver and event is InputEventMouseButton:
+	if mouseOver and event is InputEventMouseButton:
 		if event.is_pressed():
 			GameManager.click_board_cell(boardX, boardY)
+
 
 func getSizeX():
 	return 32		#La collision n'existe pas encore quand on accède à cette info
