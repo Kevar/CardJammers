@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://fjtoe608t8y"]
+
+[ext_resource type="Script" path="res://scripts/test_sfx.gd" id="1_dkhee"]
+[ext_resource type="PackedScene" uid="uid://vvbkghf7ns8w" path="res://scenes/sfx.tscn" id="1_t2xmf"]
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_dkhee")
+
+[node name="Sfx" parent="." instance=ExtResource("1_t2xmf")]
+
+[node name="Click" type="Button" parent="."]
+offset_left = 142.0
+offset_top = 74.0
+offset_right = 248.0
+offset_bottom = 108.0
+text = "Click"
+
+[node name="GrabObjective" type="Button" parent="."]
+offset_left = 309.0
+offset_top = 74.0
+offset_right = 429.0
+offset_bottom = 108.0
+text = "Grab objective"

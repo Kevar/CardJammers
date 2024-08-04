@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://vvbkghf7ns8w"]
+
+[ext_resource type="Script" path="res://scripts/sfx.gd" id="1_1ryjv"]
+[ext_resource type="AudioStream" uid="uid://bqdlo508yre08" path="res://assets/click.ogg" id="1_h8ng1"]
+[ext_resource type="AudioStream" uid="uid://clai6kquui855" path="res://assets/grab_objective.ogg" id="2_vmxgr"]
+[ext_resource type="AudioStream" uid="uid://byadmkab0aul6" path="res://assets/place_stone.ogg" id="3_dhnh3"]
+[ext_resource type="AudioStream" uid="uid://bjnk2hmbqlnjw" path="res://assets/bell.ogg" id="4_mxiin"]
+
+[node name="Sfx" type="Node2D"]
+script = ExtResource("1_1ryjv")
+
+[node name="Click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_h8ng1")
+
+[node name="GrabObjective" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vmxgr")
+
+[node name="PlaceStone" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dhnh3")
+
+[node name="PlayCard" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mxiin")
