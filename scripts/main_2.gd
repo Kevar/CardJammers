@@ -3,11 +3,19 @@ extends Node2D
 @onready var objectivesGrid:GridContainer = $Camera2D/CanvasLayer/Objectives
 @onready var powerGrid:GridContainer = $Camera2D/CanvasLayer/Powers
 @onready var globalActionButton:Button = $Camera2D/CanvasLayer/GlobalActionButton
+@onready var player2SpecialMoveButton:Button = $Camera2D/CanvasLayer/Player2SpecialMove
+@onready var player1ObjectivesCount:Label = $Camera2D/CanvasLayer/Player1ObjectivesCount
+@onready var player2ObjectivesCount:Label = $Camera2D/CanvasLayer/Player2ObjectivesCount
+
+@onready var winScreen:ColorRect = $Camera2D/CanvasLayer/WinScreen
+@onready var winText:RichTextLabel = $Camera2D/CanvasLayer/WinScreen/WinText
 
 @export var objectives:Array[Pattern]
 @export var powers:Array[Power]
 
 func _ready():
+	GameManager.gameOver.connect(on_game_over)
+	
 	var pV:PackedScene = load("res://scenes/pattern_view.tscn")
 	
 	for obj:Pattern in objectives:
@@ -20,9 +28,9 @@ func _ready():
 		
 	var powV:PackedScene = load("res://scenes/power_view.tscn")
 
-	for pow:Power in powers:
+	for po:Power in powers:
 		var powView:PowerView = powV.instantiate()
-		powView.power = pow
+		powView.power = po
 		powerGrid.add_child(powView)
 
 func _process(_delta):
@@ -30,8 +38,20 @@ func _process(_delta):
 		globalActionButton.text = "Player " + str(GameManager.currentPlayer + 1) + ": play a stone"
 		globalActionButton.disabled = true
 	else:
-		globalActionButton.text = "Next player"	
+		globalActionButton.text = "Next player"
 		globalActionButton.disabled = false
+		
+	if GameManager.specialMovePlayed:
+		player2SpecialMoveButton.visible = false
+	elif GameManager.currentPlayerCanPlayAStone and GameManager.currentPlayer == 1:
+		player2SpecialMoveButton.disabled = false
+		player2SpecialMoveButton.text = "Put a petrified stone" if GameManager.currentPlayerPlaySpecialMove else "Special move"
+	else:
+		player2SpecialMoveButton.disabled = true
+		player2SpecialMoveButton.text = "Special move"
+		
+	player1ObjectivesCount.text = str(GameManager.player1ObjectivesCount) + " Objectives"
+	player2ObjectivesCount.text = str(GameManager.player2ObjectivesCount) + " Objectives"
 
 func _on_global_action_button_pressed():
 	GameManager.next_player()
@@ -44,13 +64,18 @@ func _on_pattern_view_check_pattern(p:PatternView):
 	if p != null:
 		if GameManager.API_find_and_stone_pattern(p.pattern, GameManager.currentPlayer + 1):
 			p.capturedByPlayer = GameManager.currentPlayer
+			GameManager.add_objective(GameManager.currentPlayer)
 			GameManager.currentPlayerCanCheckAPattern = false
 			print("Pattern found")
-		#var pos:Vector2i = GameManager.API_find_pattern(p.pattern, GameManager.currentPlayer + 1)
-		#if pos.x >= 0:
-		#	print("Pattern found at " + str(pos.x) + ":" + str(pos.y))
-		#	GameManager.API_stone_pattern_at(p.pattern, GameManager.currentPlayer + 1, pos.x, pos.y)
-		#	p.capturedByPlayer = GameManager.currentPlayer
-		#	GameManager.currentPlayerCanCheckAPattern = false
 		else:
 			print("Pattern not found")
+
+func _on_player_2_special_move_pressed():
+	GameManager.currentPlayerPlaySpecialMove = !GameManager.currentPlayerPlaySpecialMove
+
+func on_game_over(winner:int):
+	winScreen.visible = true
+	winText.text = "[center]Player " + str(winner + 1) + " Wins![/center]"
+
+func _on_play_again_pressed():
+	get_tree().change_scene_to_file("res://scenes/main_2.tscn")

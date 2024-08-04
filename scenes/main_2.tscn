@@ -15,7 +15,7 @@
 [ext_resource type="Resource" uid="uid://qfhkgr6kwgnt" path="res://patterns/p_eel.tres" id="11_ql8a0"]
 [ext_resource type="Resource" uid="uid://bi7ep37xhigql" path="res://powers/p1.tres" id="12_xig8h"]
 [ext_resource type="Resource" uid="uid://cgs2cwpv4rgp7" path="res://powers/p2.tres" id="13_vam3o"]
-[ext_resource type="AudioStream" uid="uid://bw3rcoe6658ac" path="res://assets/main_theme.mp3" id="14_nm0rc"]
+[ext_resource type="AudioStream" uid="uid://dp1xkcls03u2u" path="res://assets/main_theme.mp3" id="14_nm0rc"]
 
 [node name="main2" type="Node2D"]
 script = ExtResource("1_1f3i2")
@@ -47,7 +47,7 @@ columns = 2
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1007.0
+offset_left = 1033.0
 offset_top = 5.0
 offset_right = -3.0
 offset_bottom = -5.0
@@ -66,9 +66,88 @@ offset_bottom = 36.0
 grow_horizontal = 2
 text = "Player 1 : Play a stone"
 
+[node name="Player2SpecialMove" type="Button" parent="Camera2D/CanvasLayer"]
+custom_minimum_size = Vector2(120, 30)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 253.0
+offset_top = 5.0
+offset_right = 429.0
+offset_bottom = 36.0
+grow_horizontal = 2
+text = "Player 2 special move"
+
+[node name="Label" type="Label" parent="Camera2D/CanvasLayer"]
+offset_left = 335.0
+offset_top = 8.0
+offset_right = 401.0
+offset_bottom = 31.0
+text = "Player 1:"
+
+[node name="Player1ObjectivesCount" type="Label" parent="Camera2D/CanvasLayer"]
+offset_left = 323.0
+offset_top = 41.0
+offset_right = 417.0
+offset_bottom = 64.0
+text = "0 Objectives"
+
+[node name="Player2ObjectivesCount" type="Label" parent="Camera2D/CanvasLayer"]
+offset_left = 763.0
+offset_top = 42.0
+offset_right = 857.0
+offset_bottom = 65.0
+text = "0 Objectives"
+
+[node name="Label2" type="Label" parent="Camera2D/CanvasLayer"]
+offset_left = 777.0
+offset_top = 8.0
+offset_right = 843.0
+offset_bottom = 31.0
+text = "Player 2:"
+
+[node name="WinScreen" type="ColorRect" parent="Camera2D/CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.498039)
+
+[node name="WinText" type="RichTextLabel" parent="Camera2D/CanvasLayer/WinScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 371.0
+offset_bottom = -364.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "[center]Player 1 Wins!!![/center]"
+
+[node name="PlayAgain" type="Button" parent="Camera2D/CanvasLayer/WinScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = 43.0
+offset_right = 43.5
+offset_bottom = 74.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Play again"
+
 [node name="Music" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("14_nm0rc")
 volume_db = -15.928
 autoplay = true
 
 [connection signal="pressed" from="Camera2D/CanvasLayer/GlobalActionButton" to="." method="_on_global_action_button_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/Player2SpecialMove" to="." method="_on_player_2_special_move_pressed"]
+[connection signal="pressed" from="Camera2D/CanvasLayer/WinScreen/PlayAgain" to="." method="_on_play_again_pressed"]

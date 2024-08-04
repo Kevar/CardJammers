@@ -3,17 +3,25 @@
 [ext_resource type="Script" path="res://scripts/pattern_view.gd" id="1_s7esa"]
 
 [node name="pattern_view" type="Button"]
-custom_minimum_size = Vector2(120, 120)
+custom_minimum_size = Vector2(120, 150)
 mouse_default_cursor_shape = 2
 script = ExtResource("1_s7esa")
 
 [node name="GridContainer" type="GridContainer" parent="."]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
+offset_bottom = 120.0
 grow_horizontal = 2
-grow_vertical = 2
 columns = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_top = 120.0
+offset_right = 120.0
+offset_bottom = 150.0
+text = "blabla"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

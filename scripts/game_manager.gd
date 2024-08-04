@@ -75,17 +75,42 @@ var currentPlayer:int = 0
 var currentPlayerCanPlayAStone:bool = true
 var currentPlayerCanCheckAPattern:bool = false
 
+var currentPlayerPlaySpecialMove:bool = false
+var specialMovePlayed:bool = false
+
+var lastPlayedPosition:Vector2i = Vector2i(-1, -1)
+
+var player1ObjectivesCount:int = 0
+var player2ObjectivesCount:int = 0
+
 signal updatePatternViewButtons
+signal gameOver(winner:int)
 
 func init_board(width:int, height:int, p1Color:Color, p2Color:Color):
 	boardWidth = width
 	boardHeight = height
+	
+	currentPlayer = 0
+	currentPlayerCanPlayAStone = true
+	currentPlayerCanCheckAPattern = false
+
+	currentPlayerPlaySpecialMove = false
+	specialMovePlayed = false
+
+	lastPlayedPosition = Vector2i(-1, -1)
+
+	player1ObjectivesCount = 0
+	player2ObjectivesCount = 0
+	
+	cellColors.clear()
 	
 	cellColors.append(Color.WHITE)
 	cellColors.append(p1Color)
 	cellColors.append(p2Color)
 	cellColors.append(p1Color * Color.DIM_GRAY)
 	cellColors.append(p2Color * Color.DIM_GRAY)
+	
+	board.clear()
 	
 	for x in range(0, width):
 		for y in range(0, height):
@@ -106,11 +131,17 @@ func click_board_cell(x:int, y:int):
 	var state = API_get_board_cell(x, y)
 	
 	if state == CellState.FREE and currentPlayerCanPlayAStone:
-		API_set_board_cell(x, y, 1 + currentPlayer)
-		#currentPlayer = 1-currentPlayer
-		currentPlayerCanPlayAStone = false
-		currentPlayerCanCheckAPattern = true
-		updatePatternViewButtons.emit()
+		if currentPlayerPlaySpecialMove:
+			API_set_board_cell(x, y, 3 + currentPlayer)
+			currentPlayerPlaySpecialMove = false
+			specialMovePlayed = true
+		else:
+			API_set_board_cell(x, y, 1 + currentPlayer)
+			lastPlayedPosition.x = x
+			lastPlayedPosition.y = y
+			currentPlayerCanPlayAStone = false
+			currentPlayerCanCheckAPattern = true
+			updatePatternViewButtons.emit()
 
 func next_player():
 	currentPlayer = 1-currentPlayer
@@ -119,6 +150,9 @@ func next_player():
 	updatePatternViewButtons.emit()
 
 func API_find_pattern(pattern:Pattern, state:CellState) -> Vector2i:
+	var mandatoryPos:Array[Vector2i]
+	mandatoryPos.append(lastPlayedPosition)
+	
 	var pBits:Array[int]
 	
 	pBits.append(pattern.bits)
@@ -127,13 +161,16 @@ func API_find_pattern(pattern:Pattern, state:CellState) -> Vector2i:
 	pBits.append(pattern.rotate270)
 	
 	for p in pBits:
-		var r:Vector2i = find_sub_pattern(p, state)
+		var r:Vector2i = find_sub_pattern_with_mandatory_pos(p, state, mandatoryPos)
 		if r.x != -10:
 			return r
 			
 	return Vector2i(-10, -10)
 
 func API_find_and_stone_pattern(pattern:Pattern, state:CellState) -> bool:
+	var mandatoryPos:Array[Vector2i]
+	mandatoryPos.append(lastPlayedPosition)
+	
 	var pBits:Array[int]
 	
 	pBits.append(pattern.bits)
@@ -142,7 +179,7 @@ func API_find_and_stone_pattern(pattern:Pattern, state:CellState) -> bool:
 	pBits.append(pattern.rotate270)
 	
 	for p in pBits:
-		var r:Vector2i = find_sub_pattern(p, state)
+		var r:Vector2i = find_sub_pattern_with_mandatory_pos(p, state, mandatoryPos)
 		if r.x != -10:
 			stone_pattern_at(p, state, r.x, r.y)
 			return true
@@ -182,7 +219,6 @@ func find_sub_pattern_with_mandatory_pos(pattern_bits:int, state:CellState, mand
 	
 	return Vector2i(-10, -10) #Mettre -1 crée des faux négatifs avec les patterns dans le coin supérieur gauche
 
-
 func stone_pattern_at(pattern_bits:int, state:CellState, x:int, y:int):
 	for ix in range(0, 5):
 		for iy in range(0, 5):
@@ -202,3 +238,13 @@ func extract_pattern(x:int, y:int, state:CellState) -> int:
 				pattern |= 1 << (ix + iy * 5)
 	
 	return pattern
+
+func add_objective(player:int):
+	if player == 0:
+		player1ObjectivesCount += 1
+		if player1ObjectivesCount >= 4:
+			gameOver.emit(player)
+	if player == 1:
+		player2ObjectivesCount += 1
+		if player2ObjectivesCount >= 4:
+			gameOver.emit(player)

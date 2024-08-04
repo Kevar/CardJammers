@@ -4,6 +4,7 @@ class_name PatternView
 @export var pattern:Pattern
 
 @onready var grid:GridContainer = $GridContainer
+@onready var pname:Label = $Label
 
 signal check_pattern(p:PatternView)
 
@@ -12,6 +13,10 @@ var capturedByPlayer:int = -1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	GameManager.updatePatternViewButtons.connect(on_updatePatternViewButtons)
+	
+	var s:int = pattern.resource_path.rfind("p_")
+	var e:int = pattern.resource_path.rfind(".tres")
+	pname.text = pattern.resource_path.substr(s+2, e-(s+2))
 	
 	for i in range(0, 25):
 		var c:ColorRect = ColorRect.new()
