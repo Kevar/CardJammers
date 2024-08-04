@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://bupvwi40cxlfl"]
+[gd_scene load_steps=15 format=3 uid="uid://bupvwi40cxlfl"]
 
 [ext_resource type="Script" path="res://scripts/main_2.gd" id="1_1f3i2"]
 [ext_resource type="PackedScene" uid="uid://pwpwsjfs5fkr" path="res://scenes/board_2.tscn" id="1_udjra"]
@@ -13,6 +13,7 @@
 [ext_resource type="Resource" uid="uid://thgvwqk2uvln" path="res://patterns/p_death.tres" id="9_npdoo"]
 [ext_resource type="Resource" uid="uid://bqxsqrss034k6" path="res://patterns/p_dragon.tres" id="10_rrygt"]
 [ext_resource type="Resource" uid="uid://qfhkgr6kwgnt" path="res://patterns/p_eel.tres" id="11_ql8a0"]
+[ext_resource type="AudioStream" uid="uid://dp1xkcls03u2u" path="res://assets/main_theme.mp3" id="14_nm0rc"]
 
 [node name="main2" type="Node2D"]
 script = ExtResource("1_1f3i2")
@@ -50,5 +51,10 @@ offset_right = 88.0
 offset_bottom = 36.0
 grow_horizontal = 2
 text = "Player 1 : Play a stone"
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_nm0rc")
+volume_db = -15.928
+autoplay = true
 
 [connection signal="pressed" from="Camera2D/CanvasLayer/GlobalActionButton" to="." method="_on_global_action_button_pressed"]
