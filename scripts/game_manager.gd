@@ -150,21 +150,38 @@ func API_find_and_stone_pattern(pattern:Pattern, state:CellState) -> bool:
 	return false
 
 func find_sub_pattern(pattern_bits:int, state:CellState) -> Vector2i:
-	
-	var pv1:Pattern = Pattern.new()
-	pv1.bits = pattern_bits
-			
 	for x in range(-4, boardWidth):
 		for y in range(-4, boardHeight):
 			var p:int = extract_pattern(x, y, state)
-			
-			var pv2:Pattern = Pattern.new()
-			pv2.bits = p
-	
 			if p & pattern_bits == pattern_bits:
 				return Vector2i(x, y)
 	
 	return Vector2i(-10, -10) #Mettre -1 crée des faux négatifs avec les patterns dans le coin supérieur gauche
+
+func find_sub_pattern_with_mandatory_pos(pattern_bits:int, state:CellState, mandatory:Array[Vector2i]) -> Vector2i:
+	for x in range(-4, boardWidth):
+		for y in range(-4, boardHeight):
+			# 1 : On vérifie d'abord que l'un des éléments obligatoires coïncide avec le pattern construit à cette position
+			var mandatoryOK:bool = false
+
+			for m:Vector2i in mandatory:
+				var localX = m.x - x
+				var localY = m.y - y
+
+				if localX >= 0 && localY >= 0 && localX < 5 && localY < 5:
+					var localPatternIndex = localX + localY * 5
+					if pattern_bits & 1 << localPatternIndex == 1 << localPatternIndex:
+						mandatoryOK = true
+						break
+			
+			# 2 : On vérifie si ça matche le pattern complet
+			if mandatoryOK:
+				var p:int = extract_pattern(x, y, state)
+				if p & pattern_bits == pattern_bits:
+					return Vector2i(x, y)
+	
+	return Vector2i(-10, -10) #Mettre -1 crée des faux négatifs avec les patterns dans le coin supérieur gauche
+
 
 func stone_pattern_at(pattern_bits:int, state:CellState, x:int, y:int):
 	for ix in range(0, 5):

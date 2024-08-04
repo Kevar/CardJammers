@@ -1,9 +1,11 @@
 extends Node2D
 
-@onready var grid:GridContainer = $Camera2D/CanvasLayer/GridContainer
+@onready var objectivesGrid:GridContainer = $Camera2D/CanvasLayer/Objectives
+@onready var powerGrid:GridContainer = $Camera2D/CanvasLayer/Powers
 @onready var globalActionButton:Button = $Camera2D/CanvasLayer/GlobalActionButton
 
 @export var objectives:Array[Pattern]
+@export var powers:Array[Power]
 
 func _ready():
 	var pV:PackedScene = load("res://scenes/pattern_view.tscn")
@@ -14,7 +16,14 @@ func _ready():
 		var pView:PatternView = pV.instantiate()
 		pView.pattern = obj
 		pView.check_pattern.connect(_on_pattern_view_check_pattern)
-		grid.add_child(pView)
+		objectivesGrid.add_child(pView)
+		
+	var powV:PackedScene = load("res://scenes/power_view.tscn")
+
+	for pow:Power in powers:
+		var powView:PowerView = powV.instantiate()
+		powView.power = pow
+		powerGrid.add_child(powView)
 
 func _process(_delta):
 	if GameManager.currentPlayerCanPlayAStone:

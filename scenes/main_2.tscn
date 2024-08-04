@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bupvwi40cxlfl"]
+[gd_scene load_steps=17 format=3 uid="uid://bupvwi40cxlfl"]
 
 [ext_resource type="Script" path="res://scripts/main_2.gd" id="1_1f3i2"]
 [ext_resource type="PackedScene" uid="uid://pwpwsjfs5fkr" path="res://scenes/board_2.tscn" id="1_udjra"]
@@ -13,11 +13,14 @@
 [ext_resource type="Resource" uid="uid://thgvwqk2uvln" path="res://patterns/p_death.tres" id="9_npdoo"]
 [ext_resource type="Resource" uid="uid://bqxsqrss034k6" path="res://patterns/p_dragon.tres" id="10_rrygt"]
 [ext_resource type="Resource" uid="uid://qfhkgr6kwgnt" path="res://patterns/p_eel.tres" id="11_ql8a0"]
-[ext_resource type="AudioStream" uid="uid://dp1xkcls03u2u" path="res://assets/main_theme.mp3" id="14_nm0rc"]
+[ext_resource type="Resource" uid="uid://bi7ep37xhigql" path="res://powers/p1.tres" id="12_xig8h"]
+[ext_resource type="Resource" uid="uid://cgs2cwpv4rgp7" path="res://powers/p2.tres" id="13_vam3o"]
+[ext_resource type="AudioStream" uid="uid://bw3rcoe6658ac" path="res://assets/main_theme.mp3" id="14_nm0rc"]
 
 [node name="main2" type="Node2D"]
 script = ExtResource("1_1f3i2")
 objectives = Array[Resource("res://scripts/pattern.gd")]([ExtResource("2_3gosh"), ExtResource("3_l7fcd"), ExtResource("4_k2lyx"), ExtResource("5_m6sqc"), ExtResource("6_jf07k"), ExtResource("7_c11rj"), ExtResource("8_50dge"), ExtResource("9_npdoo"), ExtResource("10_rrygt"), ExtResource("11_ql8a0")])
+powers = Array[Resource("res://scripts/power.gd")]([ExtResource("12_xig8h"), ExtResource("13_vam3o")])
 
 [node name="board2" parent="." instance=ExtResource("1_udjra")]
 cellScene = ExtResource("2_1cud1")
@@ -28,17 +31,28 @@ height = 19
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Camera2D"]
 
-[node name="GridContainer" type="GridContainer" parent="Camera2D/CanvasLayer"]
+[node name="Objectives" type="GridContainer" parent="Camera2D/CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 5.0
 offset_top = 5.0
-offset_right = -5.0
+offset_right = -600.0
 offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 columns = 2
+
+[node name="Powers" type="GridContainer" parent="Camera2D/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1007.0
+offset_top = 5.0
+offset_right = -3.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="GlobalActionButton" type="Button" parent="Camera2D/CanvasLayer"]
 custom_minimum_size = Vector2(120, 30)

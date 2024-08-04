@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Power" load_steps=2 format=3 uid="uid://cgs2cwpv4rgp7"]
+
+[ext_resource type="Script" path="res://scripts/power.gd" id="1_hi4co"]
+
+[resource]
+script = ExtResource("1_hi4co")
+description = "Pouvouar 2"
