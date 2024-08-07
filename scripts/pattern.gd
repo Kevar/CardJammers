@@ -7,14 +7,15 @@ var rotate90:int = 0
 var rotate180:int = 0
 var rotate270:int = 0
 
+var rotations:Array[int]
+
 func get_bit_at(x:int, y:int) -> bool:
 	return get_bit_ati(x + y * 5)
 	
 func get_bit_ati(index:int) -> bool:
-	return bits & 1 << index == 1 << index
+	return bits & (1 << index) == (1 << index)
 
-func compute_rotations():
-	
+func compute_rotations() -> void:
 	rotate90 = 0
 	rotate180 = 0
 	rotate270 = 0
@@ -36,3 +37,9 @@ func compute_rotations():
 				var y270:int = 4 - x
 				var i270:int = x270 + y270 * 5
 				rotate270 |= 1 << i270
+
+	rotations.clear()
+	rotations.append(bits)
+	rotations.append(rotate90)
+	rotations.append(rotate180)
+	rotations.append(rotate270)
